@@ -1,16 +1,55 @@
-# human_density_watch
+# Human Density Watch App - 人間密度計
 
-A new Flutter project.
+このアプリは以下のセンサーを活用して人と人との接触累計時間を記録するものです。
 
-## Getting Started
+- 人感センサー
+- 超音波距離センサー `予定`
 
-This project is a starting point for a Flutter application.
+## ステータス
 
-A few resources to get you started if this is your first Flutter project:
+**現在のステータスは開発中**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## アプリのセットアップについて
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+このアプリケーションはFlutter製アプリです。
+またmicro:bitによるBluetooth通信により各種センサー値を通信する仕組みのため、実行には以下が必要になります。
+
+- Flutter
+- micro:bit
+- 人感センサー（赤外線センサー）
+- 超音波距離センサー
+
+### Flutterの実行
+
+1. 実機をUSBで接続し、Device IDを調べる
+
+```shell
+$ flutter devices
+```
+
+以下のように接続中のデバイスが表示されます。
+
+> iPhone 11 Pro • 7B9AF217-3B01-4DDC-8A67-6EB5B2DF8F22     • ios •
+com.apple.CoreSimulator.SimRuntime.iOS-13-5 (simulator)
+>
+> • Device emulator-5566 is offline.
+
+`7B9AF217-3B01-4DDC-8A67-6EB5B2DF8F22`
+↑このDevice IDをコピー
+
+1. デバッグモードで実行する
+
+```shell
+$ flutter run -d {Device ID}
+```
+
+ビルドが開始されます。
+尚、iOS Simulator/Android Emulatorでも実行は可能ですが、Bluetoothを利用できないため正確なデバッグができません。
+
+_todo:センサー値とBluetoothを擬似的に返す仕組みを実装できればする。_
+
+---
+## Build & Tests
+
+`wip`
+
