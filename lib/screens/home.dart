@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:human_density_watch/widgets/text_description.dart';
-//import 'package:human_density_watch/widgets/ble_connector.dart';
+import 'package:human_density_watch/widgets/bluetooth.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            //BLEConnector(),
+            Bluetooth(),
             TextDescription(value: 'ホゲー',),
             Text("hogehoge!"),
           ],
