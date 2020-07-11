@@ -15,6 +15,8 @@ void connectBLEService() {
   _flutterBlue.stopScan();
 }
 
+/* wip
 class BLEService {
   FlutterBlue _flutterBlue = FlutterBlue.instance;
 }
+*/
