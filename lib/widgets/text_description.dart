@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 /// # widgets/ TextDescription
 /// 説明文 Widget
@@ -10,7 +11,8 @@ class TextDescription extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("Hey!$value", style: _style);
+    return Text("$value",
+        style: GoogleFonts.robotoCondensed(textStyle: _style));
   }
 }
 
