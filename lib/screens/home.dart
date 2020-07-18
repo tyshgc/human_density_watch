@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:human_density_watch/widgets/text_description.dart';
 import 'package:human_density_watch/widgets/bluetooth.dart';
 import 'package:human_density_watch/widgets/backgroud.dart';
+import 'package:human_density_watch/widgets/date_view.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({Key key, this.title}) : super(key: key);
@@ -22,9 +22,7 @@ class HomeScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Bluetooth(),
-              TextDescription(
-                value: '2020年1月1日',
-              ),
+              DateView(targetDate: DateTime(2009, 5, 6))
             ],
           ),
         ),
