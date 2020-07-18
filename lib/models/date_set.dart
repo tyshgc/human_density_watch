@@ -6,25 +6,11 @@ class DateSet {
 
   DateSet(this.date, this.lang);
 
-  String year() {
-    return DateFormat.y(lang.value).format(dateObject());
-  }
-
-  String month() {
-    return DateFormat.M(lang.value).format(dateObject());
-  }
-
-  String day() {
-    return DateFormat.d(lang.value).format(dateObject());
-  }
-
-  String hour() {
-    return DateFormat.H(lang.value).format(dateObject());
-  }
-
-  String minites() {
-    return DateFormat.m(lang.value).format(dateObject());
-  }
+  String get year => DateFormat.y(lang.value).format(dateObject());
+  String get month => DateFormat.M(lang.value).format(dateObject());
+  String get day => DateFormat.d(lang.value).format(dateObject());
+  String get hour => DateFormat.H(lang.value).format(dateObject());
+  String get minites => DateFormat.m(lang.value).format(dateObject());
 
   DateTime dateObject() {
     return date != null ? date : DateTime.now();
