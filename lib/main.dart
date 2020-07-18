@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:human_density_watch/screens/home.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
+  initializeDateFormatting('ja');
   runApp(MyApp());
 }
 
