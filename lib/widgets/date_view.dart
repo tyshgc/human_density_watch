@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:human_density_watch/models/date_set.dart';
-import 'package:human_density_watch/styles.dart';
+import 'package:human_density_watch/styles/index.dart';
 
 /// ### widgets/  DateView
 /// 日付 Widget
@@ -37,12 +36,14 @@ class DateView extends StatelessWidget {
   }
 
   Widget _valueView(String value) {
-    TextStyle _fontStyle = numberFontStyle();
-    return Container(child: Text(value, style: _fontStyle));
+    return Container(child: Text(value, style: fontStyle));
   }
 
   Widget _suffixView(String value) {
     return Container(
-        child: Text(value), padding: const EdgeInsets.only(left: 6.0));
+        child: Text(value, style: fontStyle),
+        padding: const EdgeInsets.only(left: 6.0));
   }
 }
+
+TextStyle fontStyle = numberFontStyle(size: 12.0, weight: FONT_WEIGHT.BOLD);

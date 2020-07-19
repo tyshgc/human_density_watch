@@ -1,5 +1,6 @@
 import 'package:intl/intl.dart';
 
+/// ### DateSet Model
 class DateSet {
   final DateTime date;
   final LOCALE lang;
